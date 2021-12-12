@@ -29,7 +29,7 @@ curl -G localhost:8081/user/all
 3) docker build -t my_app .
 4) docker run ......
 5) проверка
-curl -P localhost:8081/user/create -d JSON
+curl -P localhost:8081/user/create -d JSON asd
 curl -G localhost:8081/user/read/1
 curl -P localhost:8081/user/update JSON
 curl -P localhost:8081/user/delete/1 
