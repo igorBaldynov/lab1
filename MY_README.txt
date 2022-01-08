@@ -1,3 +1,5 @@
+0) скаыивание проекта
+git clone ...
 
 1) сборка проекта в jar-файл
 mvn clean install
