@@ -8,8 +8,8 @@ java -jar /target/QQQ.jar
 после запуска  проверить работу приложения curl-лом или postman-ном)
 
 3) проверка работы приложения в докере
-docker build -t my_app .
-docker run my_app 
+docker build -t baldynov_app .
+docker run baldynov_app 
 
 4) работа с контейнером докера
 docker ps //список запущенных контекнеров
@@ -26,8 +26,8 @@ curl -G localhost:8081/user/all
 инструкция для препода
 1) git clone https://github.com/igorBaldynov/lab1.git
 2) mvn clean install
-3) docker build -t my_app .
-4) docker run ......
+3) docker build -t baldynov_app .
+4) docker run baldynov_app
 5) проверка
 curl -P localhost:8081/user/create -d JSON
 curl -G localhost:8081/user/read/1
