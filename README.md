@@ -15,10 +15,10 @@ docker run -p 8081:8081 baldynov_app
 
 5) Проверка:
 
-5-1) С помощью curl (из консоли)
+5.1) С помощью curl (из консоли)
 curl -P localhost:8081/user/create -d JSON;
 curl -G localhost:8081/user/read/1;
 curl -P localhost:8081/user/update JSON;
 curl -P localhost:8081/user/delete/1;
 
-5-2) C помощью postman (интерфейс)
+5.2) C помощью postman (интерфейс)
