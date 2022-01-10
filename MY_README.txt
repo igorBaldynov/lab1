@@ -1,41 +1,73 @@
-0) скаыивание проекта
-git clone ...
+Моя инструкция:
 
-1) сборка проекта в jar-файл
-mvn clean install
-(jar-файл генерируется и копируется в каталог target/)
 
-2) проверка работы приложения из консоли
-java -jar /target/QQQ.jar
-после запуска  проверить работу приложения curl-лом или postman-ном)
 
-3) проверка работы приложения в докере
+Создание, сборка и запуск проекта.
+
+--------------------------------
+Создание и запуск на "чистой java" (только java без maven, docker, idea и др)
+
+1) Создание исходного кода
+A.java
+
+2) Компиляция исходного кода в байт-код
+javac A.java
+
+3) Выполнение байт-кода
+java A.class
+
+--------------------------------
+Создание и запуск с maven (без docker, idea и др)
+
+1) Инициализация maven-проекта 
+(maven-проект - это каталог с исходниками и конфигурационным файлом pom.xml)
+
+mvn archetype:generate
+
+2) Создание исходного кода 
+A.java
+
+3) Компиляция исходного кода в байт-код
+mvn compile
+
+4) сборка байт-код в единый исполняемый jar-файл 
+mvn package
+
+(jar-файл создается в каталоге target)
+
+5) запуск 
+java -jar target/ABC.jar
+
+
+--------------------------------
+Создание и запуск с maven + docker (без idea)
+
+1) Инициализация maven-проекта 
+(maven-проект - это каталог с исходниками и конфигурационным файлом pom.xml)
+
+mvn archetype:generate
+
+2) Создание исходного кода 
+A.java
+
+3) Компиляция исходного кода в байт-код
+mvn compile
+
+4) сборка байт-код в единый исполняемый jar-файл 
+mvn package
+
+(jar-файл создается в каталоге target)
+
+5) запуск с помощью docker
+
+5-1) Создание конфигурационного файла Dockerfile (в корне проекта)
+
+5-2) Создание docker-образа
 docker build -t baldynov_app .
+
+5-3) Запуск docker-образа
 docker run baldynov_app 
 
-4) работа с контейнером докера
-docker ps //список запущенных контекнеров
-docker stop container_id (container_id  берется из вывода docker ps)
-
-после запуска проверить работу приложения curl-лом или postman-ном)
-
-6) curl
-//get-запрос:
-curl -G localhost:8081/user/all
- 
-
-----
-инструкция для препода
-1) git clone https://github.com/igorBaldynov/lab1.git
-2) mvn clean install
-3) docker build -t baldynov_app .
-4) docker run baldynov_app
-5) проверка
-curl -P localhost:8081/user/create -d JSON
-curl -G localhost:8081/user/read/1
-curl -P localhost:8081/user/update JSON
-curl -P localhost:8081/user/delete/1 
-
-
-
+--------------------------------
+Создание и запуск из idea
 
