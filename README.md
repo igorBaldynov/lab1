@@ -10,7 +10,7 @@
 Клонирование из github, сборка и запуск проекта
 
 1) Клонирование:
-git clone -b master https://github.com/igorBaldynov/lab1.git
+git clone -b master https://github.com/igorBaldynov/lab1/tree/master
 
 2) Сборка в помощью maven:
 cd lab1/
