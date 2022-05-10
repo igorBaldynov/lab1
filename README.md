@@ -1,1 +1,3 @@
-# lab1
+
+
+curl -G localhost:8081/hostnames
